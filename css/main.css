@@ -6,8 +6,64 @@
 
 html {
   box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
-*, *::before, *::after {
+*, *::before, ::after {
   box-sizing: inherit;
+}
+
+.photo {
+  width: 100%;
+  display: block;
+}
+
+.dino-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo:nth-child(2),
+.photo:nth-child(4) {
+  display: none;
+}
+
+@media only screen and (min-width: 25em) {
+
+  .dino {
+    width: 66.6666%;
+  }
+
+  .dino:nth-child(2),
+  .dino:nth-child(4) {
+    display: block;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  .dino {
+    width: 33.3333%;
+  }
+
+  .dino:nth-child(1) {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .dino {
+    width: 25%;
+  }
+
+  .dino:nth-child(1) {
+    display: block;
+  }
+
 }
